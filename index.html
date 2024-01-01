@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sajeeb Sarker</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* General styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, deeppink, deepskyblue);
+    }
+
+    /* Dropdown menu styles */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: aqua;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: lightblue;
+    }
+
+    /* Main section styles */
+    .main-section {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .main-section img {
+      width: 60%;
+      max-width: 300px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Finishing section styles */
+    .finishing-section {
+      background-color: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 20px;
+      color: gray;
+      margin-top: 20px;
+    }
+
+    #goToTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: lightgray;
+      color: black;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 50%;
+    }
+
+    #goToTopBtn:hover {
+      background-color: gray;
+    }
+
+    /* Custom div with specified styles */
+    .custom-div {
+      width: 100%;
+      height: 50px;
+      border: 3px solid black;
+      background-color: deepskyblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      left: 0;
+      top: 15px;
+      transform: translateY(-50%);
+    }
+
+    /* Resize menu icon */
+    .dropbtn i {
+      font-size: 2.5em;
+    }
+
+    /* Responsive styles */
+    @media screen and (max-width: 768px) {
+      .main-section img {
+        width: 80%;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .main-section img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Custom div with specified styles -->
+  <div class="custom-div">
+    <div class="dropdown-menu">
+      <div class="dropdown">
+        <button class="dropbtn" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="service.html">Services</a>
+          <a href="About.html">About</a>
+          <a href="contack.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-section">
+    <img src="me.jpg" alt="Me">
+  </div>
+  
+<!-- Box Section -->
+<div class="box-section" style="width: 100%; height: 100px; border: 2px solid black; margin-bottom: 20px;">
+ <p class="am">Sajeeb Sarker, a 21-year-old digital marketer studying BBS, blends academic prowess with a passion for digital strategies. Combining youthful energy with marketing finesse, Sajeeb excels in leveraging cutting-edge techniques to drive impactful online engagements.</p>
+</div>
+
+<!-- Finishing Section -->
+<section class="finishing-section" style="background-color: black; margin-top: 20px;">
+  <!-- Finishing section content -->
+  <div class="finishing-content" style="color: #eee; padding: 20px;">
+    Copyright NoticeAll website content, text, images, and graphics are © Sajeeb Sarker and protected by copyright laws.Use of ContentReproduction, modification, or distribution of this content without prior written consent is prohibited.PermissionsFor content usage or licensing inquiries, contact us at sajeebsarker690@gmail.com.
+    </div>
+
+    <button onclick="topFunction()" id="goToTopBtn" title="Go to top">Top</button>
+  </div>
+</section>
+
+
+  <script>
+    // JavaScript for the dropdown menu
+    function toggleMenu() {
+      var dropdownMenu = document.getElementById("myDropdown");
+      if (dropdownMenu.style.display === "none" || dropdownMenu.style.display === "") {
+        dropdownMenu.style.display = "block";
+      } else {
+        dropdownMenu.style.display = "none";
+      }
+    }
+
+    // JavaScript for the go to top button
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+
+</body>
+</html>
+<style>
+.box-section .am{
+  color: #fff;
+  position: absolute;
+  left: 20px;
+  right: 20px;
+}
+</style>
+<style>
+ .finishing-section .finishing-content{
+   color: red;
+ }
+</style>
+
